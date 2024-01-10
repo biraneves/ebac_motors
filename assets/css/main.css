@@ -41,12 +41,21 @@ button {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header,
+footer {
   background-color: var(--header-bgcolor);
   color: var(--base-white);
   padding-top: 1em;
 }
 
-header > .container {
+header > .container,
+footer > .container {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1em;
@@ -146,7 +155,7 @@ section p {
   font-weight: bold;
 }
 
-.lista-veiculos li button {
+button {
   display: block;
   width: 100%;
   padding: 0.5em 0;
@@ -160,4 +169,49 @@ section p {
 
 .item-central {
   margin: 0 5%;
+}
+
+.form-campo {
+  margin-bottom: 1em;
+}
+
+.form-campo label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.form-campo input,
+.form-campo textarea {
+  width: 100%;
+  display: block;
+  padding: 0.5em;
+}
+
+.form-campo textarea {
+  resize: none;
+  height: 7.5em;
+}
+
+form {
+  max-width: 360px;
+}
+
+form button {
+  max-width: 120px;
+}
+
+footer p {
+  font-size: 0.8em;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+}
+
+footer li a {
+  color: var(--base-white);
+  font-size: 24px;
+  margin-left: 0.5em;
 }
