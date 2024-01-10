@@ -6,10 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   </head>
   <body>
     <header>
-      <h1>EBAC Motors</h1>
+      <div class="container">
+        <h1>EBAC Motors</h1>
+        <div class="menu-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ul>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Em destaque</a></li>
+            <li><a href="#">Promoções</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
     </header> 
+    <div id="carrossel-imagens">
+      <img src="assets/images/slide1.png" alt="Porsche Carrera">
+      <img src="assets/images/slide2.png" alt="Automóvel BMW">
+      <img src="assets/images/slide3.png" alt="Ford GT">
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $('#carrossel-imagens').slick({
+          autoplay: true,
+          dots: true,
+          arrows: true,
+        });
+      });
+    </script>
   </body>
 </html>

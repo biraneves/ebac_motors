@@ -1,9 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@300;700&display=swap');
 
 :root {
-  --font-base: 'Roboto', sans-serif;
-  --font-title: 'Quicksand', sans-serif;
+  --font-title: 'Roboto', sans-serif;
+  --font-base: 'Quicksand', sans-serif;
+
+  --header-bgcolor: #192a56;
+  --nav-bgcolor: #575fcf;
 
   --base-white: #fff;
   --base-black: #999;
+}
+
+body {
+  font-family: var(--font-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-title);
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--header-bgcolor);
+  color: var(--base-white);
+  padding-top: 1em;
+}
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+nav {
+  background-color: var(--nav-bgcolor);
+  padding: 1em 0;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+  margin-right: 1em;
+  font-size: 1.125em;
+  font-weight: bold;
+  font-family: var(--font-title);
+  text-transform: uppercase;
+}
+
+nav li a {
+  color: var(--base-white);
+  text-decoration: none;
+}
+
+.menu-hamburguer {
+  width: 2em;
+}
+
+.menu-hamburguer span {
+  height: 2px;
+  width: 100%;
+  background-color: var(--base-white);
+  display: block;
+  margin-bottom: 6px;
 }
