@@ -22,10 +22,10 @@
       <nav>
         <div class="container">
           <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Em destaque</a></li>
-            <li><a href="#">Promoções</a></li>
-            <li><a href="#">Contato</a></li>
+            <li id="li-sobre-a-loja">Sobre</li>
+            <li id="li-destaques">Em destaque</li>
+            <li id="li-promocoes">Promoções</li>
+            <li id="li-contato">Contato</li>
           </ul>
         </div>
       </nav>
@@ -51,7 +51,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="destaques">
       <div class="container">
         <h2>Em destaque</h2>
         <ul class="container-flex lista-veiculos">
@@ -65,36 +65,18 @@
             <button type="button">Tenho interesse!</button>
           </li>
           <li class="item-central">
-            <img src="assets/images/carro-bmw.png" alt="Automóvel BMW">
-            <h3>Automóvel BMW</h3>
-            <p>Câmbio automático, 2 portas, conversível, vidros e travas elétricas.</p>
+            <img src="assets/images/fusca.png" alt="VW Fusca">
+            <h3>VW Fusca</h3>
+            <p>Câmbio manual, 2 portas, vidros e travas manuais.</p>
             <div class="preco">
               <strong>R$ 75.000,00</strong>
             </div>
             <button type="button">Tenho interesse!</button>
           </li>
           <li>
-            <img src="assets/images/carro-bmw.png" alt="Automóvel BMW">
-            <h3>Automóvel BMW</h3>
-            <p>Câmbio automático, 2 portas, conversível, vidros e travas elétricas.</p>
-            <div class="preco">
-              <strong>R$ 75.000,00</strong>
-            </div>
-            <button type="button">Tenho interesse!</button>
-          </li>
-          <li>
-            <img src="assets/images/carro-bmw.png" alt="Automóvel BMW">
-            <h3>Automóvel BMW</h3>
-            <p>Câmbio automático, 2 portas, conversível, vidros e travas elétricas.</p>
-            <div class="preco">
-              <strong>R$ 75.000,00</strong>
-            </div>
-            <button type="button">Tenho interesse!</button>
-          </li>
-          <li class="item-central">
-            <img src="assets/images/carro-bmw.png" alt="Automóvel BMW">
-            <h3>Automóvel BMW</h3>
-            <p>Câmbio automático, 2 portas, conversível, vidros e travas elétricas.</p>
+            <img src="assets/images/moto-bmw.png" alt="Moto BMW">
+            <h3>Moto BMW</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <div class="preco">
               <strong>R$ 75.000,00</strong>
             </div>
@@ -103,7 +85,7 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="promocoes">
       <div class="container">
         <h2>Promoções</h2>
         <ul class="container-flex lista-veiculos">
@@ -160,7 +142,7 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="contato">
       <div class="container">
         <h2>Entre em contato!</h2>
         <form>
@@ -213,55 +195,6 @@
     <script type="text/javascript" src="assets/js/plugins/jquery.mask.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/jquery.validate.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/messages_pt_BR.min.js"></script>
-    <script>
-      $(document).ready(() => {
-        $('#carrossel-imagens').slick({
-          autoplay: true,
-          dots: true,
-          arrows: true,
-        });
-
-        $('.menu-hamburguer').on('click', () => {
-          $('nav').slideToggle();
-        });
-
-        $('#telefone').mask('(00) 00000-0000', {
-          placeholder: '(__) _____-____',
-        });
-
-        $('form').validate({
-          rules: {
-            nome: {
-              required: true,
-            },
-            telefone: {
-              required: true,
-            },
-            email: {
-              required: true,
-              email: true,
-            },
-            veiculo_interesse: {
-              required: false,
-            },
-            mensagem: {
-              required: true,
-            },
-          },
-          messages: {
-            nome: 'Por gentileza, informe o seu nome.',
-          },
-          submitHandler: (form) => {
-            console.log(form);
-          },
-          invalidHandler: (evento, validador) => {
-            let camposInvalidos = validador.numberOfInvalids();
-
-            if (camposInvalidos)
-              alert(`Há ${camposInvalidos} campos inválidos.`);
-          },
-        });
-      });
-    </script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
   </body>
 </html>

@@ -12,6 +12,7 @@
 
   --base-white: #fff;
   --base-black: #555;
+  --base-red: #a00;
 }
 
 html {
@@ -79,11 +80,9 @@ nav li {
   font-weight: bold;
   font-family: var(--font-title);
   text-transform: uppercase;
-}
-
-nav li a {
   color: var(--base-white);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .menu-hamburguer {
@@ -179,6 +178,15 @@ button {
   font-weight: bold;
   display: block;
   margin-bottom: 0.3em;
+}
+
+#nome-error,
+#telefone-error,
+#email-error,
+#mensagem-error {
+  color: var(--base-red);
+  margin-top: 0.2em;
+  font-size: 0.8em;
 }
 
 .form-campo input,
