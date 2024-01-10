@@ -6,6 +6,9 @@
 
   --header-bgcolor: #192a56;
   --nav-bgcolor: #575fcf;
+  --button-int-bgcolor: #119759;
+
+  --promo-color: #888;
 
   --base-white: #fff;
   --base-black: #555;
@@ -108,4 +111,53 @@ section h2 {
 section p {
   line-height: 1.2em;
   margin-bottom: 0.5em;
+}
+
+.lista-veiculos {
+  flex-wrap: wrap;
+}
+
+.lista-veiculos li {
+  list-style: none;
+  max-width: 30%;
+  margin-bottom: 1.5em;
+}
+
+.lista-veiculos img {
+  max-width: 100%;
+}
+
+.lista-veiculos li h3 {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+.preco {
+  margin: 1em 0;
+}
+
+.preco-original {
+  margin-bottom: 0.5em;
+  color: var(--promo-color);
+  font-size: 0.875em;
+}
+
+.lista-veiculos li strong {
+  font-weight: bold;
+}
+
+.lista-veiculos li button {
+  display: block;
+  width: 100%;
+  padding: 0.5em 0;
+  border: none;
+  background-color: var(--button-int-bgcolor);
+  color: var(--base-white);
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.item-central {
+  margin: 0 5%;
 }
