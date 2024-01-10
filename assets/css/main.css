@@ -8,7 +8,7 @@
   --nav-bgcolor: #575fcf;
 
   --base-white: #fff;
-  --base-black: #999;
+  --base-black: #555;
 }
 
 html {
@@ -17,6 +17,7 @@ html {
 
 body {
   font-family: var(--font-base);
+  color: var(--base-black);
 }
 
 h1,
@@ -43,7 +44,6 @@ header {
 }
 
 header > .container {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1em;
@@ -85,4 +85,27 @@ nav li a {
   background-color: var(--base-white);
   display: block;
   margin-bottom: 6px;
+}
+
+.container-flex {
+  display: flex;
+}
+
+#sobre-a-loja img {
+  max-width: 400px;
+  margin-right: 1.5em;
+}
+
+section {
+  padding: 3em 0;
+}
+
+section h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+section p {
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
 }
